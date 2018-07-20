@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS PART 4 - Assignment 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="background-color: goldenrod">
+    <h1 style="color: ghostwhite; text-align: center; padding-top: 50px">Spread Operator and Destructuring</h1>
+    <script>
+        /* Combing two arrays into single one */
+
+        var evens = [2, 4, 6, 8]; 
+        var odds = [1, 3, 5, 7]; 
+        var primes = [2, 3, 5, 7, 11];
+
+        /* Solution */
+
+        var combinedArrays = [...primes, ...evens, ...odds];
+        console.log(combinedArrays);
+
+        /* Copy below array into another array */
+
+        var primes2 = [...primes];
+        console.log(primes2);
+
+        /* Destructuring Arrays */
+        /* Destructuring below object into variables names same the property names */
+
+        var jamesBond = {
+            first: 'James',
+            last: 'Bond',
+            country: 'United States',
+            city: 'New york',
+            twitter: '@jamesbond'
+        };
+
+        var {
+            first,
+            last,
+            twitter
+        } = jamesBond;
+
+        console.log(first, last, twitter);
+        console.log(jamesBond);
+
+        /* Destructure below array into variables player1,player2,player3 and player4 respectively */
+
+        var players = ['paul', 'andy', 'darrell', 'jim'];
+        var [player1, player2, player3, player4] = players;
+
+        console.log(players);
+
+        /* ================= THE END ==================== */
+
+    </script>
+</body>
+</html>
